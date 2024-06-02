@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing Agency</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .main-section {
+            margin: 100px;
+        }
+        .contact-button {
+            margin-top: 20px;
+        }
+
+/* Container for "What We Do" slider */
+.what-we-do-slider {
+    overflow: hidden;
+}
+
+/* Slider content */
+.slider-content {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Individual slide */
+.slide {
+    flex: 0 0 100%;
+}
+
+/* Dots for slide navigation */
+.dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.active-dot {
+    background-color: #333;
+}
+
+/* Highlight on hover */
+.card:hover {
+    border: 2px solid #333;
+}
+
+/* Overlay for image hover effect */
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-overlay:hover {
+    opacity: 1;
+}
+
+/* Read more button style */
+.read-more-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+    </style>
+</head>
+<body>
+<section>
+<div class="container main-section">
+    <div class="row">
+        <div class="col-md-8">
+            <h1 class="display-4" style="color: red;">AWARD WINNING</h1></br></br>
+            <h2 class="display-4" style="font-weight: bold;"><b>DIGITAL MARKETING AGENCY</b></h2>
+            <p>Morbi sed lacus nec finibus feugiant et fermentum nibh. Pellentesque 
+                vitac ante at elit fringilla ac at purus. morbi sed lacus nec risus finibus
+                 feugiant et fermentum...</p>
+            <button id="contactBtn" class="btn btn-danger contact-button">Contact Us</button>
+        </div>
+        <div class="col-md-4">
+            <img src="image.png" alt="Image" class="img-fluid">
+        </div>
+    </div>
+</div>
+
+<!-- Contact Form Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="contactModalLabel">Talk to us</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="workEmail">Work Email</label>
+                        <input type="email" class="form-control" id="workEmail" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control" id="firstName" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                        <label class="form-check-label" for="termsCheck">I agree to Fyle's terms and conditions...</label>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Contact Us</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</section></br></br>
+<!-- WHAT WE DO-->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Content on the right -->
+                <div class="card" onclick="changeImage('image1.jpg')">
+                    <div class="card-body">
+                        <h5  display="display-5"class="card-title" style="color: red;"><b>WHAT WE DO</b></h5>
+                        <h6 class="card-text"><b>SERVICES PROVIDE</br> FOR YOU</b></h6>
+                        <p>Morbi sed lacus nec finibus feugiant et fermentum nibh. Pellentesque 
+                            vitac ante at elit fringilla ac at purus. morbi sed lacus nec risus finibus
+                             feugiant et fermentum...</p>
+                        <a href="https://fylehq.com" class="read-more-button" target="_blank" style="margin-top: 20px;">Read more</a>
+                    </div>
+                </div>
+                <!-- Add more content cards as needed -->
+            </div>
+            <div class="col-md-6">
+                <!-- Slider and dots on the left -->
+                <div class="what-we-do-slider">
+                    <div class="slider-content">
+                        <!-- Slide 1 -->
+                        <div class="slide">
+                            <img src="slide1.png" alt="Slide 1" class="img-fluid">
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="slide">
+                            <img src="slide2.png" alt="Slide 2" class="img-fluid">
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="slide">
+                            <img src="slide3.png" alt="Slide 3" class="img-fluid">
+                        </div>
+                    </div>
+                    <!-- Dots for slide navigation -->
+                    <div class="dots">
+                        <span class="dot active-dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section></br></br>
+<!---OUR PROJECT-->
+<section>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Image on the left -->
+            <img id="projectImage" src="projectimg.png" alt="Project Image" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+            <!-- Content on the right -->
+            <div class="card" onclick="changeImage('image1.jpg')">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: red;">OUR PROJECT</h5>
+                    <p class="card-text"><b>WHY WE ARE BEST</b></p>
+                    <p>Description about Our project goes here. You can provide detailed information about Our project, its goals, achievements, and more.</p>
+                    <a href="https://fylehq.com" class="read-more-button" target="_blank">Read more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#contactBtn').click(function(){
+            $('#contactModal').modal('show');
+        });
+
+        $('#contactForm').submit(function(event){
+            event.preventDefault();
+            alert('Form submitted!');
+            $('#contactModal').modal('hide');
+        });
+    });
+
+    // Function to show/hide pages based on dot clicks
+function showPage(pageNumber) {
+    // Your logic to handle page navigation
+    console.log('Navigating to page ' + pageNumber);
+}
+
+// Variables for slider
+var slideIndex = 1;
+
+// Function to show slide
+function showSlide(n) {
+    var slides = document.getElementsByClassName("slide");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (var i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active-dot", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active-dot";
+}
+
+// Function to change slide on dot click
+function currentSlide(n) {
+    showSlide(slideIndex = n);
+}
+
+// Function to change image on click
+function changeImage(projectimg) {
+    var projectImage = document.getElementById('projectImage');
+    projectImage.src = "projectimg.png";
+}
+</script>
+
+</body>
+</html>
